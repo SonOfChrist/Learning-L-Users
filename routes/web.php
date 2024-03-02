@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-// Be carefull with the order we we put our routes 
+// Be carefull with the order we we put our routes and stick to the naming convention of the routes Resource{Restful HTTP}
 
 Route::post('follow/{user}', [App\Http\Controllers\FollowsController::class, 'store'])->name('profile.store');
 
