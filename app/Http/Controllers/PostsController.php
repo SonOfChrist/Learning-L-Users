@@ -30,6 +30,7 @@ class PostsController extends Controller
     public function store()
     {
         // Here we are just validating the image and the caption
+        // add the image needs to be an image
         $data = request()->validate([
             'caption' => 'required',
             'image' => ['required', 'image']
