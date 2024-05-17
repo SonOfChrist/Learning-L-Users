@@ -11,11 +11,8 @@
         </div>
     </div>
     <div class="row pt-2 pb-4">
-
-    </div>
         <div class="col-4 offset-4">
             <div>
-
                <p>
                 <span style="font-weight: bold">
                     <a class=" text-decoration-none" href="/profile/{{ $post->user->id }}">
@@ -26,11 +23,13 @@
             </div>
         </div>
     </div>
+   
     @endforeach
     <div class="row">
         <div class="col-12 d-flex justify-content-center">
             {{ $posts->links() }}
         </div>
     </div>
+</div>
 </div>
 @endsection

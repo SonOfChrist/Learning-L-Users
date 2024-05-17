@@ -1,5 +1,6 @@
 <?php
 
+use App\Mail\StanleyMochogeEmail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +22,10 @@ Auth::routes();
 Route::post('follow/{user}', [App\Http\Controllers\FollowsController::class, 'store'])->name('profile.store');
 
 
-Route::get('/', [App\Http\Controllers\PostsController::class, 'index']);
+Route::get('/email', function(){
+    return new StanleyMochogeEmail();
+});
+Route::get('/', [App\Http\Controllers\PostsController::class, 'index'])->name('index');
 Route::get('/p/create', [App\Http\Controllers\PostsController::class, 'create'])->name('p.create');
 Route::post('/p', [App\Http\Controllers\PostsController::class, 'store'])->name('p.store');
 Route::get('/p/{post}', [App\Http\Controllers\PostsController::class, 'show'])->name('profile.show');
