@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id');                  //foreign Key in our table -> creates connection with the database signed table user->profiles
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->string('url')->nullable();

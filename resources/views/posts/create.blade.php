@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <form action="/p" enctype="multipart/form-data" method="post" >
-        @csrf {{-- this is just going to authenticate the correct image that is being submitted by the user --}}
+        @csrf                                                                                                                       {{-- this is just going to authenticate the correct image that is being submitted by the user --}}
         <div class="row">
             <div class="col-8 offset-2">
                 <div class="row"><h1>Add New Post</h1></div>
